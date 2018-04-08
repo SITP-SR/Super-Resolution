@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from keras.models import Sequential
 from keras.layers import Conv2D, Input, BatchNormalization
 from keras.optimizers import SGD, Adam
@@ -23,7 +26,7 @@ def predict_model():
 
 
 class ImgSuperReso(object):
-    def __init__(self, weight_path):
+    def __init__(self, weight_path='model_data/model_weight.h5'):
         self.srcnn_model = predict_model()
         self.srcnn_model.load_weights(weight_path)
 
@@ -50,7 +53,7 @@ class ImgSuperReso(object):
 
 if __name__ == "__main__":
     t1 = time.time()
-    imgSuperReso = ImgSuperReso("model_data/model_weight.h5")
+    imgSuperReso = ImgSuperReso()
     t2 = time.time()
     imgSuperReso.processImg('temp/flowers.bmp', 'temp/new.bmp')
     t3 = time.time()

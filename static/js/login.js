@@ -32,6 +32,10 @@ function check() {
         dataType: 'json',
         success: function (data) {
             isValid = data.valid;
+            console.log(123);
+            $.cookie('personName',name);
+            console.log($.cookie('personName'));
+            $("#personName").text(name);
         },
         error: function () {
             alert("Fail to connect the server！");

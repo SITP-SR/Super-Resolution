@@ -11,10 +11,32 @@
     <link href="static/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="static/css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
     <script src="static/js/jquery-3.1.0.min.js"></script>
+    <script src="static/js/jquery.cookie.js"></script>
     <script src="static/js/indexTitle.js"></script>
     <script type="text/javascript" src="static/js/qiniu.js"></script>
     <script type="text/javascript" src="static/js/main.js"></script>
+    <script type="text/javascript" src="static/js/login.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            if($.cookie('personName')!=null){
+                $("#personName").text($.cookie('personName'));
+            }
+            else{
+                $("#personName").text("Sign in");
+            }
+         });
 
+
+        function signInOrQuit() {
+            if($.cookie('personName')!=null){
+                $.cookie('personName',null);
+                $("#personName").text("Sign in");
+            }
+            else{
+                window.location.href="login";
+            }
+        }
+    </script>
 
 </head>
 <body>
@@ -33,9 +55,9 @@
                 Gallery
             </div>
         </a>
-        <a class="menu-li" href="login">
+        <a class="menu-li" onclick="signInOrQuit()">
             <span class="menu-icon icon-user"></span>
-            <div class="menu-name">
+            <div class="menu-name" id="personName">
                 Sign in
             </div>
         </a>
@@ -79,7 +101,7 @@
                 <!--<input type="file" id="chooseImage" onchange="UploadImg(this)" accept="image/*"/>-->
             <!--</p>-->
             <div class="img-wrapper">
-                <img id="img-container" src="http://p6jpx88sq.bkt.clouddn.com/flowers.bmp">
+                <img id="img-container" src="">
                 <div id="imgWarning"></div>
             </div>
 
@@ -93,7 +115,7 @@
                 Processed Image
             </p>
             <div class="img-wrapper">
-                <img id="processedImg" src="http://p6jpx88sq.bkt.clouddn.com/new.bmp" />
+                <img id="processedImg" src="" />
             </div>
 
 

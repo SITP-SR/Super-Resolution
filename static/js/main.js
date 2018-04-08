@@ -9,10 +9,12 @@ function generate() {
         url:"/improveImage",
         async:false,
         data:{"img_url":firstUrl},
-        dataType: 'json',
+        // dataType: 'json',
         success:function (data) {
-            var secondUrlJson = $.parseJSON(data);
-            $('#processedImg').attr('src', secondUrlJson.processed_img_url);
+            console.log(data);
+            // var secondUrlJson = JSON.parse(data);
+            // console.log(secondUrlJson.processed_img_url);
+            $('#processedImg').attr('src', data);
         }
     });
 }

@@ -66,7 +66,7 @@ def improve_image_route():
     # upload processed image
     new_url = upload_img(new_img_path)
 
-    return jsonify(processed_img_url=new_url)
+    return new_url
 
 
 @app.route('/getAllImage', methods=['POST'])
@@ -80,12 +80,10 @@ def get_all_image_route():
 
 @app.route('/upload_token', methods=['POST'])
 def upload_Token():
-    print('jlw')
     access_key = "UP4lyUo3aBJPr2YBIv7x-BmV83mTd6hczJS0bbkl"
     secret_key = "W7MacbJiXJPsSXn-H12aqN-WsZEokxBAW8ZaXDDD"
     q = Auth(access_key, secret_key)
     token= q.upload_token('sitp')
-    print(token)
     return token
 
 

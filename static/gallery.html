@@ -11,7 +11,18 @@
     <link href="static/css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
 
     <script src="static/js/jquery-3.1.0.min.js"></script>
+    <script src="static/js/jquery.cookie.js"></script>
     <script src="static/js/gallery.js"></script>
+        <script>
+        jQuery(document).ready(function () {
+        if($.cookie('personName')!=null){
+            $("#personName").text($.cookie('personName'));
+        }
+        else{
+            $("#personName").text("Sign in");
+        }
+    });
+    </script>
 
 </head>
 <body onload="showImgList()">
@@ -32,7 +43,7 @@
         </a>
         <a class="menu-li" href="login">
             <span class="menu-icon icon-user"></span>
-            <div class="menu-name">
+            <div class="menu-name" id="personName">
                 Sign in
             </div>
         </a>

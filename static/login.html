@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login in</title>
+    <link href="static/css/login.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link href="static/css/animate.min.css" rel="stylesheet" type="text/css"/>
+    <script src="static/js/jquery-3.1.0.min.js"></script>
+
+
+</head>
+<body>
+<div class="container">
+    <section>
+        <div id="sign-form" >
+            <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+            <a class="hiddenanchor" id="toregister"></a>
+            <a class="hiddenanchor" id="tologin"></a>
+            <div id="wrapper">
+                <div id="login" class="animate form">
+                    <form  id="signIn-form" method="get" action="/index" autocomplete="on" onsubmit="return check()">
+                        <h1><i class="fa fa-paper-plane"></i> Sign in</h1>
+                        <label id="signIninfo"></label>
+                        <p>
+                            <label for="username" class="uname" data-icon="u" >Username</label>
+                            <input id="username" name="username" required="required" type="text" placeholder="Input account name"/>
+                            <label id="usernameinfo"></label>
+                        </p>
+                        <p>
+                            <label for="password" class="youpasswd" data-icon="p">Password</label>
+                            <input id="password" name="password" required="required" type="password" placeholder="Input password" />
+                            <label id="passwordinfo"></label>
+                        </p>
+
+                        <p class="login button">
+                            <input type="submit" value="Sign in" />
+                        </p>
+                        <p class="change_link">
+                            <a href="index.html" class="back">Back</a>
+                            Don't have an account？
+                            <a href="#toregister" class="to_register">Sign up</a>
+                        </p>
+                    </form>
+                </div>
+
+                <div id="register" class="animate form">
+                    <form  id="signUp-form" method="get" action="/index" autocomplete="on" onsubmit="return signUpCheck()">
+                        <h1><i class="fa fa-paper-plane"></i> Sign up</h1>
+                        <p>
+                            <label for="usernamesignup" class="icon icon-user">Username</label>
+                            <input id="usernamesignup" name="usernamesignup" required="required" type="text" onblur="checkName();" placeholder="Create an account name" />
+                            <label id="usernameSignup-info"></label>
+                        </p>
+                        <p>
+                            <label for="emailsignup" class="icon icon-mail"  >E-mail</label>
+                            <input id="emailsignup" name="emailsignup" required="required" type="email" onblur="checkEmail();" placeholder="Input a valid E-mail"/>
+                            <label id="emailinfo"></label>
+                        </p>
+                        <p>
+                            <label for="telesignup" class="icon icon-phone" >Phone</label>
+                            <input id="telesignup" name="telesignup" required="required" type="text" onblur="checkEmail();" placeholder="Input phone number"/>
+                            <label id="teleinfo"></label>
+                        </p>
+                        <p>
+                            <label for="passwordsignup" class="icon icon-lock" >Password </label>
+                            <input id="passwordsignup" name="passwordsignup" required="required" type="password" onblur="checkPassword();" placeholder="Create your password"/>
+                            <label id="passwordSignup-info"></label>
+                        </p>
+                        <p>
+                            <label for="passwordsignup_confirm" class="icon icon-lock" >Confirm password </label>
+                            <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" onblur="checkRepassword();" placeholder="Confirm your password"/>
+                            <label id="repasswordinfo"></label>
+                        </p>
+                        <p class="signin button">
+                            <input type="submit" value="Sign up"/>
+                        </p>
+                        <p class="change_link">
+                            <a href="index.html" class="back">Back</a>
+                            Already had an account？
+                            <a href="#tologin" class="to_register">Sign in </a>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+<script src="static/js/login.js"></script>
+</body>
+</html>

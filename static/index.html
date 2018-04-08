@@ -2,16 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="static/css/normalize.css" />
+    <link href="static/css/basic.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/start.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/animate.min.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="static/css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <script src="static/js/jquery-3.1.0.min.js"></script>
+    <script src="static/js/indexTitle.js"></script>
+    <script type="text/javascript" src="static/js/qiniu.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
+
+
 </head>
 <body>
-<h1>Hello World!</h1>
-<form enctype="multipart/form-data" method="POST" id="form">
-    <input type="text" value="123" name="age">
-    <input type="file" id="img" name="pic">
-    <input type="submit">
-</form>
+<div class="menu">
+    <div class="menu-bar">
+
+        <a class="menu-li menu-li-active" href="index">
+            <span class="menu-icon icon-home"></span>
+            <div class="menu-name">
+                Home
+            </div>
+        </a>
+        <a class="menu-li" href="gallery">
+            <span class="menu-icon icon-images"></span>
+            <div class="menu-name">
+                Gallery
+            </div>
+        </a>
+        <a class="menu-li" href="login">
+            <span class="menu-icon icon-user"></span>
+            <div class="menu-name">
+                Sign in
+            </div>
+        </a>
+        <a class="logo"><img src="static/images/logo.png" height="80" width="230" /></a>
+    </div>
+</div>
+<!--主页背景-->
+<div class="focus-bg">
+    <div class="img1" id = "background1">
+        <h4 id="title" class="text">Super-Resolution</h4>
+        <p class="sub-text">This is an online platform oriented towards intelligent image processing, designed for improving the resolution of multiple images.</p>
+    </div>
+    <!--<div class="img2" id="background2">-->
+        <!--<p id="title2" class="text2"> <img id="pen" src="images/pen.png" />Using a painting board,<br>sketch everything you like.</p>-->
+    <!--</div>-->
+    <!--<div class="img3" id="background3">-->
+        <!--<p id="title3" class="text2"> <img id="magnify" src="images/magnify.png" />Go for searching different visual datasets <br>similar to your sketch.</p>-->
+    <!--</div>-->
+</div>
+
+
+<!--START-->
+
+<div class="start-header">
+    <div class="header-main">Designed for everyone, enhance the clarity of images.</div>
+    <div class="header-sub">This program makes images restore lost pixels. It's made for building clear images.</div>
+</div>
+
+<div class="container-start">
+    <section id="grid" class="grid clearfix">
+
+        <div class = "firstImage">
+            <input type="hidden" id="domain" value="http://p6jpx88sq.bkt.clouddn.com/">
+            <input type="hidden" id="uptoken_url" value="UP4lyUo3aBJPr2YBIv7x-BmV83mTd6hczJS0bbkl:-XmNntKaykheP4S_lwn_XGJ8eQ8=:eyJzY29wZSI6InNpdHAiLCJkZWFkbGluZSI6MTUyMzE5MDIzMH0=">
+            <div id="container">
+                <a class="btn btn-default btn-lg " id="pickfiles" href="#">
+                    <span>选择文件</span>
+                </a>
+            </div>
+            <!--<p>-->
+                <!--<input type="file" id="chooseImage" onchange="UploadImg(this)" accept="image/*"/>-->
+            <!--</p>-->
+            <div class="img-wrapper">
+                <img id="img-container" src="http://p6jpx88sq.bkt.clouddn.com/flowers.bmp">
+                <div id="imgWarning"></div>
+            </div>
+
+        </div>
+        <div class="procss">
+            <button id="ProcessButton" type="button" onclick="generate()">Process<i class="fa fa-angle-double-right"></i></button>
+        </div>
+
+        <div class = "secondImage">
+            <p>
+                Processed Image
+            </p>
+            <div class="img-wrapper">
+                <img id="processedImg" src="http://p6jpx88sq.bkt.clouddn.com/new.bmp" />
+            </div>
+
+
+        </div>
+
+    </section>
+</div>
+
+<div class="container-github">
+    <div class="git-text">This is open source. It's hosted, developed and maintained on GitHub.</div>
+    <a href='https://github.com/SITP-SR' target="_blank">
+        <div class="github">
+            View the GitHub project
+        </div>
+    </a>
+</div>
+<script src="static/js/hovers.js"></script>
+<footer>
+    <br><br>
+    This project is supported by Tongji Super-resolution SITP team.<br>
+    Codes and data can only be used for non-comercial purpose.<br><br>
+    Currently v1.0.0 <br>
+</footer>
 </body>
-<script src="static/jquery-3.3.1.js"></script>
-<script src="static/sendImg.js"></script>
+
 </html>

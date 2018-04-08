@@ -1,0 +1,471 @@
+/* remove codrops styles and reset the whole thing */
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/BebasNeue-webfont.woff') format('woff'),
+    url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+    url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    margin:0;
+    padding:0;
+}
+html,body {
+    margin:0;
+    padding:0;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img {
+    border:0;
+}
+address,caption,cite,code,dfn,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border:0;
+}
+
+body{
+    width: 100%;
+
+    background: url("../images/loginBg.png"), no-repeat;
+    background-size: cover;
+}
+.container{
+    margin: 150px;
+}
+
+#sign-form{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    font-family: "Trebuchet MS","Myriad Pro",Arial,sans-serif;
+}
+
+/** fonts used for the icons **/
+@font-face {
+    font-family: 'FontomasCustomRegular';
+    src: url('fonts/fontomas-webfont.eot');
+    src: url('fonts/fontomas-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/fontomas-webfont.woff') format('woff'),
+    url('fonts/fontomas-webfont.ttf') format('truetype'),
+    url('fonts/fontomas-webfont.svg#FontomasCustomRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FranchiseRegular';
+    src: url('fonts/franchise-bold-webfont.eot');
+    src: url('fonts/franchise-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/franchise-bold-webfont.woff') format('woff'),
+    url('fonts/franchise-bold-webfont.ttf') format('truetype'),
+    url('fonts/franchise-bold-webfont.svg#FranchiseRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+a.hiddenanchor{
+    display: none;
+}
+/** The wrapper that will contain our two forms **/
+#wrapper{
+    width: 60%;
+    right: 0px;
+    min-height: 560px;
+    margin: 0px auto;
+    width: 500px;
+    position: relative;
+}
+/**** Styling the form elements **/
+
+/**** general text styling ****/
+#wrapper a{
+    text-decoration: underline;
+}
+
+#wrapper h1{
+    font-size: 48px;
+    color: #622954;
+    padding: 2px 0 30px 0;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(63, 43, 54, 0.5);;
+}
+/** For the moment only webkit supports the background-clip:text; */
+
+#wrapper p{
+    margin-bottom:15px;
+}
+#wrapper p:first-child{
+    margin: 0px;
+}
+#wrapper label{
+    color: #3F2B36;
+    position: relative;
+}
+
+/**** advanced input styling ****/
+/* placeholder */
+::-webkit-input-placeholder  {
+    color: rgb(190, 188, 188);
+    font-style: italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{
+    color: rgb(190, 188, 188);
+    font-style: italic;
+}
+input {
+    outline: none;
+}
+
+/* all the input except submit and checkbox */
+#wrapper input:not([type="checkbox"]){
+    width: 92%;
+    margin-top: 4px;
+    padding: 10px 5px 10px 32px;
+    border: 1px solid rgb(178, 178, 178);
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing : content-box;
+    box-sizing : content-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#wrapper input:not([type="checkbox"]):active,
+#wrapper input:not([type="checkbox"]):focus{
+    border: 1px solid rgba(87,42,63, 0.5);
+    background: rgba(255,255,255, 0.2);
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(87,42,63, 0.5) inset;
+    -moz-box-shadow: 0px 1px 4px 0px rgba(87,42,63, 0.5) inset;
+    box-shadow: 0px 1px 4px 0px rgba(87,42,63, 0.5) inset;
+}
+#signUp-form input:not([type="checkbox"]){
+    padding-left: 10px;
+    margin-right: 10px;
+}
+#sign-form .icon{
+    color: #622954;
+}
+
+@font-face {
+    font-family: 'password';
+    src: url('font/password.eot?93233360');
+    src: url('font/password.eot?93233360#iefix') format('embedded-opentype'),
+    url('font/password.woff2?93233360') format('woff2'),
+    url('font/password.woff?93233360') format('woff'),
+    url('font/password.ttf?93233360') format('truetype'),
+    url('font/password.svg?93233360#password') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'password';
+    src: url('../font/password.svg?93233360#password') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "password";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-mail:before { content: '\e800'; } /* '' */
+.icon-heart:before { content: '\e801'; } /* '' */
+.icon-heart-empty:before { content: '\e802'; } /* '' */
+.icon-star:before { content: '\e803'; } /* '' */
+.icon-star-empty:before { content: '\e804'; } /* '' */
+.icon-user:before { content: '\e805'; } /* '' */
+.icon-cancel-circled:before { content: '\e806'; } /* '' */
+.icon-location:before { content: '\e807'; } /* '' */
+.icon-minus-circled:before { content: '\e808'; } /* '' */
+.icon-plus-circled:before { content: '\e809'; } /* '' */
+.icon-home:before { content: '\e80a'; } /* '' */
+.icon-lock:before { content: '\e80b'; } /* '' */
+.icon-user-1:before { content: '\e80c'; } /* '' */
+.icon-phone:before { content: '\e80d'; } /* '' */
+.icon-key:before { content: '\e80e'; }
+
+/** the magic icon trick ! **/
+[data-icon]:after {
+    content: attr(data-icon);
+    font-family: 'FontomasCustomRegular';
+    color: #622954;
+    position: absolute;
+    left: 10px;
+    top: 35px;
+    width: 30px;
+}
+
+/*styling both submit buttons */
+#wrapper p.button input{
+    width: 100%;
+    cursor: pointer;
+    background: #622954;
+    padding: 8px 1px;
+
+    color: #fff;
+    font-size: 24px;
+    border: 1px solid #622954;
+    margin-bottom: 10px;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow:
+    0px 1px 1px 1px rgb(210, 210, 210);
+    -moz-box-shadow:
+    0px 1px 1px 1px rgb(210, 210, 210);
+    box-shadow:
+    0px 1px 1px 1px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#wrapper p.button input:hover{
+    background: #331322;
+    border: 1px solid #331322;
+}
+#wrapper p.button input:active,
+#wrapper p.button input:focus{
+    background: #331322;
+    position: relative;
+    top: 1px;
+    border: 1px solid #331322;
+    -webkit-box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.2) inset;
+}
+p.login.button,
+p.signin.button{
+    text-align: right;
+    margin: 5px 0;
+}
+
+
+/* styling the checkbox "keep me logged in"*/
+.keeplogin{
+    margin-top: -5px;
+}
+.keeplogin input,
+.keeplogin label{
+    display: inline-block;
+    font-size: 12px;
+    font-style: italic;
+}
+.keeplogin input#loginkeeping{
+    margin-right: 5px;
+}
+.keeplogin label{
+    width: 80%;
+}
+
+
+/*styling the links to change from one form to another */
+
+p.change_link{
+    position: absolute;
+    color: rgba(98, 41, 84, 0.6);
+    left: 0px;
+    height: 20px;
+    width: 440px;
+    padding: 17px 30px 20px 30px;
+    font-size: 16px	;
+    text-align: right;
+    border-top: 1px solid rgb(219, 229, 232);
+    -webkit-border-radius: 0 0  5px 5px;
+    -moz-border-radius: 0 0  5px 5px;
+    border-radius: 0 0  5px 5px;
+    background: rgb(225, 234, 235);
+    background: -moz-repeating-linear-gradient(-45deg,
+    rgb(247, 247, 247) ,
+    rgb(247, 247, 247) 15px,
+    rgb(225, 234, 235) 15px,
+    rgb(225, 234, 235) 30px,
+    rgb(247, 247, 247) 30px
+    );
+    background: -webkit-repeating-linear-gradient(-45deg,
+    rgb(247, 247, 247) ,
+    rgb(247, 247, 247) 15px,
+    rgb(225, 234, 235) 15px,
+    rgb(225, 234, 235) 30px,
+    rgb(247, 247, 247) 30px
+    );
+    background: -o-repeating-linear-gradient(-45deg,
+    rgb(247, 247, 247) ,
+    rgb(247, 247, 247) 15px,
+    rgb(225, 234, 235) 15px,
+    rgb(225, 234, 235) 30px,
+    rgb(247, 247, 247) 30px
+    );
+    background: repeating-linear-gradient(-45deg,
+    rgb(247, 247, 247) ,
+    rgb(247, 247, 247) 15px,
+    rgb(225, 234, 235) 15px,
+    rgb(225, 234, 235) 30px,
+    rgb(247, 247, 247) 30px
+    );
+}
+#wrapper p.change_link a {
+    display: inline-block;
+    font-weight: bold;
+    padding: 2px 6px;
+    color: #622954;
+    margin-left: 0px;
+    text-decoration: none;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s  linear;
+    -o-transition: all 0.4s linear;
+    -ms-transition: all 0.4s  linear;
+    transition: all 0.4s  linear;
+}
+#wrapper p.change_link a:hover {
+    color: #9a6f8f;
+}
+
+.back{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid rgb(203, 213, 214);
+    background-color: white;
+    margin-right: 100px;
+}
+/** Styling both forms **/
+#register,
+#login{
+    position: absolute;
+    top: 0px;
+    width: 88%;
+    padding: 18px 6% 60px 6%;
+    margin: 0 0 35px 0;
+    background: rgb(247, 247, 247);
+    border: 1px solid rgba(180, 129, 187,0.8);
+    -webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7);
+    -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7);
+    box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7);
+    -webkit-box-shadow: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#register{
+    z-index: 21;
+    opacity: 0;
+}
+#login{
+    z-index: 22;
+}
+#toregister:target ~ #wrapper #register,
+#tologin:target ~ #wrapper #login{
+    z-index: 22;
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -ms-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-delay: .1s;
+    -moz-animation-delay: .1s;
+    -o-animation-delay: .1s;
+    -ms-animation-delay: .1s;
+    animation-delay: .1s;
+}
+#toregister:target ~ #wrapper #login,
+#tologin:target ~ #wrapper #register{
+    -webkit-animation-name: fadeOutLeft;
+    -moz-animation-name: fadeOutLeft;
+    -ms-animation-name: fadeOutLeft;
+    -o-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+}
+
+/** the actual animation, credit where due : http://daneden.me/animate/ ***/
+.animate{
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-fill-mode: both;
+
+    -o-animation-duration: 0.5s;
+    -o-animation-timing-function: ease;
+    -o-animation-fill-mode: both;
+
+    -ms-animation-duration: 0.5s;
+    -ms-animation-timing-function: ease;
+    -ms-animation-fill-mode: both;
+
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+

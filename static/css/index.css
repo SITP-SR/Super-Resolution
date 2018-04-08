@@ -1,0 +1,115 @@
+.focus-bg{
+    background-color: #432543;
+    font-size: 500%;
+    color: #fff;
+    width: 100%;
+    top: 60px;
+    height: 500px;
+    position: relative;
+    background-repeat:no-repeat;
+
+}
+.hide{
+    display: none;
+}
+.img1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("../images/title.jpg"), no-repeat;
+
+    background-size:cover;
+    z-index: 90;
+}
+.img2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("../images/title2.jpg"), no-repeat;
+    background-size:cover;
+    z-index: 80;
+}
+.img3{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("../images/title3.jpg"), no-repeat;
+    background-size:cover;
+    z-index: 70;
+}
+.git-text{
+    text-align: center;
+    font-size: 120%;
+    font-weight: 300;
+    padding-top: 20px;
+}
+.github{
+    margin: 20px auto;
+    color: #432543;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px 8px 8px 8px;
+}
+.text{
+    margin: 100px auto;
+    text-align: center;
+    font-weight: 300;
+    font-size: 80%;
+}
+.text2{
+    margin: 150px 0 0 0px;
+    text-align: center;
+    font-size: 50%;
+    width: 1000px;
+    font-weight: 400;
+    float: left;
+    text-shadow: rgba(0,0,0, 0.5) 0 2px 2px;
+}
+#pen{
+    margin: -100px 0px;
+    float: left;
+
+}
+#magnify{
+    margin: -100px 0px;
+    float: left;
+
+}
+.sub-text{
+    margin: -60px auto;
+    text-align: center;
+    font-weight: 200;
+    font-size: 30%;
+    width: 70%;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-duration: 1.5s; //动画持续时间
+}
+#title{
+    width: 500px;
+    height: 200px;
+    border-style: solid;
+    border-radius: 8px 8px 8px 8px;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-duration: 1.2s; //动画持续时间
+
+}
+#title2{
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-duration: 1.2s; //动画持续时间
+}
+#title3{
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-duration: 1.2s; //动画持续时间
+}
+a{
+    text-decoration: none;
+}
+

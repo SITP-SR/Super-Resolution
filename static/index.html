@@ -29,7 +29,7 @@
 
         function signInOrQuit() {
             if($.cookie('personName')!=null){
-                $.cookie('personName',null);
+                jQuery.cookie("personName", '', { expires: -1 });
                 $("#personName").text("Sign in");
             }
             else{

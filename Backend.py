@@ -45,12 +45,12 @@ def sign_in_route():
     status = sign_in(user_name, password)
     if status:
         session['user_name'] = user_name
+    print()
     return jsonify(valid=status)
 
 
 @app.route('/improveImage', methods=['POST'])
 def improve_image_route():
-    # user_name = session['user_name']
     # download image
     img_url = request.form['img_url']
     img_path = download_img(img_url, img_prefix='./temp/')
@@ -65,6 +65,10 @@ def improve_image_route():
 
     # upload processed image
     new_url = upload_img(new_img_path)
+
+    # update image url to database
+    user_name = session['user_name']
+    save_image(user_name, new_url)
 
     return new_url
 

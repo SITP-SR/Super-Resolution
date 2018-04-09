@@ -9,9 +9,12 @@ function showImgList() {
             url: '/getAllImage',
             type: 'post',
             async: false, //同步
+            dataType: 'json',
             success: function (data) {
-                var imgJson = $.parseJSON(data);
-                imgList=imgJson.url_list;
+                console.log(data.url_list);
+                // var imgJson = $.parseJSON(data);
+                // console.log(imgJson);
+                imgList=data.url_list;
             },
             error: function () {
                 alert("Fail to connect the server！");
@@ -19,7 +22,7 @@ function showImgList() {
         });
 
         for(var i=0;i<imgList.length;i++){
-            var str="http://p6jpx88sq.bkt.clouddn.com/"+imgList[i];
+            var str=imgList[i];
             var temp = '<div class="post"><a class="example-image-link" href= "images/images1.jpg" data-lightbox="example-set"><img src="'+str+'" alt="" /></a></div>';
             $("#listing").append(temp);
     }

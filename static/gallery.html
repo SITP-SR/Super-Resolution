@@ -11,17 +11,29 @@
     <link href="static/css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
 
     <script src="static/js/jquery-3.1.0.min.js"></script>
+    <script src="static/lightbox/js/lightbox-plus-jquery.js"></script>
     <script src="static/js/jquery.cookie.js"></script>
     <script src="static/js/gallery.js"></script>
-        <script>
+    <script>
         jQuery(document).ready(function () {
-        if($.cookie('personName')!=null){
-            $("#personName").text($.cookie('personName'));
+            if($.cookie('personName')!=null){
+                $("#personName").text($.cookie('personName'));
+            }
+            else{
+                $("#personName").text("Sign in");
+            }
+        });
+
+
+        function signInOrQuit() {
+            if($.cookie('personName')!=null){
+                jQuery.cookie("personName", '', { expires: -1 });
+                $("#personName").text("Sign in");
+            }
+            else{
+                window.location.href="login";
+            }
         }
-        else{
-            $("#personName").text("Sign in");
-        }
-    });
     </script>
 
 </head>
@@ -41,7 +53,7 @@
                 Gallery
             </div>
         </a>
-        <a class="menu-li" href="login">
+        <a class="menu-li" onclick="signInOrQuit()">
             <span class="menu-icon icon-user"></span>
             <div class="menu-name" id="personName">
                 Sign in
@@ -69,7 +81,7 @@
     <!--<div class="post"><a class="example-image-link" href= "images/images9.jpg" data-lightbox="example-set"><img src="static/images/images9.jpg"  alt="" /></a></div>-->
 </div>
 
-<script src="static/lightbox/js/lightbox-plus-jquery.js"></script>
+
 
 
 </body>

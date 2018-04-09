@@ -2,6 +2,12 @@
  * Created by zhaoangyouyou on 26/12/2016.
  */
 
+// $(document).ready(function(){
+//   $("form").submit(function(e){
+//     e.preventDefault();
+//     alert("form已经禁止提交");
+//   });
+// });
 
 function check() {
     var password = document.getElementById("password").value;
@@ -20,7 +26,9 @@ function check() {
         return false;
     }
 
+    var isValid;
 
+    console.log('signin');
     $.ajax({
         url: '/signin',
         data: {
@@ -31,11 +39,10 @@ function check() {
         async: false, //同步
         dataType: 'json',
         success: function (data) {
-            isValid = data.valid;
-            console.log(123);
             $.cookie('personName',name);
             console.log($.cookie('personName'));
             $("#personName").text(name);
+            isValid = data.valid;
         },
         error: function () {
             alert("Fail to connect the server！");
@@ -44,9 +51,8 @@ function check() {
     if(!isValid){
         document.getElementById("signIninfo").innerHTML = "Username or password is wrong!";
         $("#signIninfo").css({"color":"red","font-size":"80%"});
-        return isValid;
     }
-
+    return isValid;
 }
 
 function signUpCheck() {

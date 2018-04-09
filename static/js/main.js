@@ -128,7 +128,7 @@ $(function() {
                 // progress.setComplete(up, info);
                 var res = $.parseJSON(info.response);
                 firstUrl=$('#domain').val()+res.key;
-                alert(firstUrl);
+                // alert(firstUrl);
                 $('#img-container').attr('src', firstUrl);
 
             },

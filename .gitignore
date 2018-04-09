@@ -1,5 +1,6 @@
 temp/
 .idea/
+pocket.pid
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
